@@ -1,0 +1,48 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px;
+  background-color:whitesmoke;
+  /* gap: 10%; */
+}
+.logo-image{
+    height: 50px;
+    width: 50px;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  
+}
+.navbar-links li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  color: black;
+}
+.enroll-button {
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}   
+.enroll-button:hover {
+  background-color: #e65c00;
+}
+.navbar-menu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
