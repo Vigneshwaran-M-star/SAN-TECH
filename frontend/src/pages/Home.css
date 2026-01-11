@@ -1,15 +1,12 @@
-.home {
-  font-family: Arial, sans-serif;
-}
+
 
 /* Hero Section */
 .hero {
-  height: 80vh;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  height: 90vh;
+  background: linear-gradient(135deg, #1f366d, #042355);
   color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   padding: 20px;
@@ -39,29 +36,115 @@
   background-color: #0ea5e9;
 }
 
-/* Services Section */
-.services {
+/* Registration Form */
+.hero-form {
+  width: 360px;
+  margin: 40px auto;
+  /* background: #0f172a; */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  color: #e5e7eb;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Heading */
+.hero-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #38bdf8;
+}
+
+/* Labels */
+.hero-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+/* Inputs & Select */
+.hero-form input,
+.hero-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background-color: #020617;
+  color: #e5e7eb;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Placeholder */
+.hero-form input::placeholder {
+  color: #94a3b8;
+}
+
+/* Focus State */
+.hero-form input:focus,
+.hero-form select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+/* Button */
+.hero-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Button Hover */
+.hero-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .hero-form {
+    margin: 20px;
+    padding: 25px;
+  }
+}
+
+
+
+/* Courses Section */
+.courses {
   padding: 60px 20px;
   text-align: center;
 }
 
-.services h2 {
+.courses h2 {
   font-size: 32px;
   margin-bottom: 30px;
 }
 
-.service-cards {
-  display: flex;
+.course-cards {
+  display: grid;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 50px;
+  grid-template-columns: auto auto auto;
 }
 
 .card {
   width: 260px;
   padding: 25px;
   border-radius: 10px;
-  background-color: #f8fafc;
+  background-color: #e3f1ff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
