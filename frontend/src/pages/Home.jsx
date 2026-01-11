@@ -47,48 +47,66 @@ function Home() {
 
         <div className="course-cards">
           <div className="card">
+            <img className="pythonimg" src="src/assets/python.webp" alt="" />
             <h3>Python</h3>
             <p>Beginner and intermediate levels</p>
+            <button>course details</button>
           </div>
 
           <div className="card">
+            <img className="sqlimg" src="src/assets/sql.avif" alt="" />
             <h3>SQL</h3>
             <p>Database management and queries</p>
+            <button>course details</button>
           </div>
 
           <div className="card">
+            <img src="src/assets/django.jpg" alt="" />
             <h3>Django</h3>
             <p>Python web framework </p>
+            <button>course details</button>
           </div>
 
           <div className="card">
+            <img src="src/assets/htmlcss.jpg" alt="" />
             <h3>HTML+CSS</h3>
             <p>Responsive web design</p>
+            <button>course details</button>
           </div>
 
           <div className="card">
+            <img src="src/assets/js.jpg" alt="" />
             <h3>JavaScript</h3>
             <p>Dynamic web applications</p>
+            <button>course details</button>
           </div>
 
           <div className="card">
+            <img src="src/assets/react.jpg" alt="" />
             <h3>React JS</h3>
             <p>Building user interfaces</p>
+            <button>course details</button>
           </div>
 
           <div className="card">
+            <img src="src/assets/dataanalytics.png" alt="" />
             <h3>Data Analytics</h3>
             <p>Data visualization and insights</p>
+            <button>course details</button>
           </div>
 
           <div className="card">
+            <img src="src/assets/datascience.webp" alt="" />
             <h3>Data Science</h3>
             <p>Machine learning and AI</p>
+            <button>course details</button>
           </div>
 
           <div className="card">
+            <img src="src/assets/fullstack.jpg" alt="" />
             <h3>Python Full Stack</h3>
             <p>Responsive web design</p>
+            <button>course details</button>
           </div>
         </div>
       </section>
