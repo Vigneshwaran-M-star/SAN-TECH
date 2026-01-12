@@ -1,0 +1,120 @@
+.course-card {
+  position: relative;
+  width: 520px;
+  background: linear-gradient(180deg, #ffffff, #f9fafb);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin-top: 4%;
+  justify-self: center;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+.back-btn {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #eef2f7;
+  color: #1f2937;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.back-btn:hover {
+  background: #dbeafe;
+  color: #2563eb;
+  transform: scale(1.08);
+}
+
+
+.course-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #3776ab, #ffd43b);
+  color: #ffffff;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin: 0 auto 16px;
+}
+
+
+.course-card h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+
+.course-card p {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 22px;
+}
+
+.course-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 26px;
+}
+
+.course-card ul li {
+  font-size: 14px;
+  color: #374151;
+  padding: 10px 0 10px 32px;
+  position: relative; 
+}
+/* .course-card li {
+    border-bottom: 1px solid #e5e7eb;
+} */
+.course-card ul li:last-child {
+  border-bottom: none;
+}
+
+.course-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.course-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #3776ab, #1e40af);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.course-btn:hover {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  transform: translateY(-2px);
+}

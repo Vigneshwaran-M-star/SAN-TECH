@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 function Home() {
 
@@ -30,7 +31,7 @@ function Home() {
         }
       );
 
-      alert("Form submitted successfully!");
+      // alert("Form submitted successfully!");
       setFormData({ name: "", phone: "", email: "", course: "" });
 
     } catch (error) {
@@ -117,64 +118,57 @@ function Home() {
           <div className="card">
             <img className="pythonimg" src="src/assets/python.webp" alt="" />
             <h3>Python</h3>
-            <p>Beginner and intermediate levels</p>
-            <button>course details</button>
+            <p>From fundamentals to advanced concepts, gain the skills required for modern development.</p>
+            <Link to="/python" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img className="sqlimg" src="src/assets/sql.avif" alt="" />
-            <h3>SQL</h3>
+            <h3>Python,SQL</h3>
             <p>Database management and queries</p>
-            <button>course details</button>
+            <Link to="/sql" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/django.jpg" alt="" />
-            <h3>Django</h3>
+            <h3>Python,SQL,Django</h3>
             <p>Python web framework </p>
-            <button>course details</button>
+           <Link to="/python" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/htmlcss.jpg" alt="" />
-            <h3>HTML+CSS</h3>
-            <p>Responsive web design</p>
-            <button>course details</button>
+            <h3>Web Development</h3>
+            <p>Build responsive and interactive websites with our Web Designing Course in Chennai.</p>
+            <Link to="/python" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/js.jpg" alt="" />
-            <h3>JavaScript</h3>
+            <h3>HTML,CSS,JavaScript,Reactjs</h3>
             <p>Dynamic web applications</p>
-            <button>course details</button>
-          </div>
-
-          <div className="card">
-            <img src="src/assets/react.jpg" alt="" />
-            <h3>React JS</h3>
-            <p>Building user interfaces</p>
-            <button>course details</button>
+           <Link to="/python" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/dataanalytics.png" alt="" />
             <h3>Data Analytics</h3>
             <p>Data visualization and insights</p>
-            <button>course details</button>
+            <Link to="/python" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/datascience.webp" alt="" />
             <h3>Data Science</h3>
-            <p>Machine learning and AI</p>
-            <button>course details</button>
+            <p>Gain in-depth knowledge of data analytics and machine learning with our Data Science Course.</p>
+           <Link to="/python" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/fullstack.jpg" alt="" />
             <h3>Python Full Stack</h3>
-            <p>Responsive web design</p>
-            <button>course details</button>
+            <p>Master both front-end and back-end technologies with our Full Stack Developer Course.</p>
+            <Link to="/python" className="course-link">course details</Link>
           </div>
         </div>
       </section>
