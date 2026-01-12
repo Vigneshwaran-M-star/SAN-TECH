@@ -18,8 +18,8 @@ function Navbar() {
         <div className="navbar-menu">
           <ul className="navbar-links">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">Courses</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><Link to="/About">About Us</Link></li>
             <li><Link to="/about">Contact</Link></li>
           </ul>
 

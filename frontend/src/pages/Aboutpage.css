@@ -1,0 +1,65 @@
+.about-container {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+.fbox1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: aliceblue;
+}
+.about-hero {
+  background: linear-gradient(135deg, #1f366d, #042355);
+  color: white;
+  text-align: start;
+  padding: 60px 20px;
+}
+
+.about-hero h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+.about-hero p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.about-content {
+  padding: 60px 10%;
+}
+
+.about-text {
+  justify-self: center;
+}
+#aboutcon{
+    width: 80%;
+}
+.about-text h3 {
+  font-size: 2.6rem;
+  color: #ff6600;
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive */
+/* @media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+} */

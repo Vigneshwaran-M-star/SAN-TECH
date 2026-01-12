@@ -1,0 +1,146 @@
+.footer {
+  background: rgb(0, 0, 0);
+  color: #fff;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+.fbox {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.footer-top {
+  max-width: 320px;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.footer-t {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#footerimg {
+  width: 50px;
+  /* animation: float 3s ease-in-out infinite; */
+}
+
+.footer-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ff6600;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  color: #ffdddd;
+  margin-top: 10px;
+}
+
+/* FOOTER MENU */
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.footer-menu h5 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  position: relative;
+}
+.footer-menu ul{
+  list-style: none ;
+}
+.footer-menu h5::after {
+  content: "";
+  width: 35px;
+  height: 3px;
+  background: #ffcccc;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+
+.footer-menu li {
+  margin: 10px 0;
+}
+
+.footer-menu a {
+ color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.footer-menu a:hover {
+  color: #fff;
+  transform: translateX(6px);
+}
+
+/* FOLLOW US – ICON ONLY */
+.follow-us {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.follow-us li {
+  margin: 0;
+}
+
+.follow-us a {
+  font-size: 22px;
+  color: #fff;
+}
+
+.follow-us a:hover {
+  transform: translateY(-4px) scale(1.2);
+}
+
+
+/* COPYRIGHT */
+#year {
+  text-align: center;
+  font-size: 0.70rem;
+  color: #fff;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* RESPONSIVE */
+/* @media (max-width: 768px) {
+  .fbox {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .follow-us {
+    justify-content: center;
+  }
+  .footer-menu h5::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 322px) {
+  .footer-title{
+    font-size: 1.4rem;
+  }
+} */

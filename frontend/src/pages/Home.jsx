@@ -1,48 +1,116 @@
+import { useState } from "react";
 import "./Home.css";
 
 function Home() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    course: ""
+  });
+
+  // ✅ ADD THIS FUNCTION
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbwKpF8plgGqKdB2szqtG9rBlaAIAsZlPQh9A4CJmsogm9E7oXIe5wsySxpJSSGcepBP/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+        }
+      );
+
+      alert("Form submitted successfully!");
+      setFormData({ name: "", phone: "", email: "", course: "" });
+
+    } catch (error) {
+      console.error(error);
+      alert("Submission failed");
+    }
+  };
+
+
   return (
     <>
     
       {/* Hero Section */}
-      <section className="hero">
+       <section className="hero">
         <div>
-        <h1>Online Learning Platform</h1>
-        <p>
-          We build modern websites and web applications using the latest
-          technologies.
-        </p>
-        <button>Get Started</button>
+          <h1>Online Learning Platform</h1>
+          <p>We build modern websites and web applications.</p>
+          <button>Get Started</button>
         </div>
+
         <div className="hero-form">
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <h2>Enrollment Form</h2>
+
             <label>Name</label>
-            <input type="text" placeholder="Full Name" required />
-             <label>Phone</label>
-            <input type="tel" placeholder="Phone Number" required />
-             <label>Email</label>
-            <input type="email" placeholder="Email" required />
-             <label>Course</label>
-            <select name="course" id="">
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Full Name"
+              required
+            />
+
+            <label>Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Phone Number"
+              required
+            />
+
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email"
+              required
+            />
+
+            <label>Course</label>
+            <select
+              name="course"
+              value={formData.course}
+              onChange={handleChange}
+              required
+            >
               <option value="">Select Course</option>
-              <option value="Python">Python</option>
-              <option value="SQL">SQL</option>
-              <option value="Django">Django</option>
-              <option value="HTML+CSS">HTML+CSS</option>
-              <option value="JavaScript">JavaScript</option>
-              <option value="React JS">React JS</option>
-              <option value="Data Analytics">Data Analytics</option>
-              <option value="Data Science">Data Science</option>
-              <option value="Python Full Stack">Python Full Stack</option>
+              <option>Python</option>
+              <option>SQL</option>
+              <option>Django</option>
+              <option>HTML+CSS</option>
+              <option>JavaScript</option>
+              <option>React JS</option>
+              <option>Data Analytics</option>
+              <option>Data Science</option>
+              <option>Python Full Stack</option>
             </select>
+
             <button type="submit">Submit</button>
           </form>
         </div>
       </section>
 
       {/* Courses Section */}
-      <section className="courses">
+     <section className="courses" id="courses">
         <h2>Courses</h2>
 
         <div className="course-cards">
