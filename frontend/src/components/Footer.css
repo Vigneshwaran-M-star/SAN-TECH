@@ -1,5 +1,5 @@
-.footer {
-  background: rgb(0, 0, 0);
+.footer1 {
+  background:#ff6600;
   color: #fff;
   padding: 15px;
   margin-top: 50px;
@@ -21,18 +21,21 @@
 .footer-t {
   display: flex;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 #footerimg {
   width: 50px;
   /* animation: float 3s ease-in-out infinite; */
+  background-color: white;
 }
 
 .footer-title {
   font-size: 1.6rem;
   font-weight: 700;
   color: #ff6600;
+  background-color: white;
+  padding: 11px;
 }
 
 .footer-desc {
@@ -108,7 +111,7 @@
 /* COPYRIGHT */
 #year {
   text-align: center;
-  font-size: 0.70rem;
+  font-size: 1rem;
   color: #fff;
 }
 
@@ -144,3 +147,9 @@
     font-size: 1.4rem;
   }
 } */
+
+.footer2 {
+  background: rgb(0, 0, 0);
+  color: #fff;
+  padding: 15px;
+}

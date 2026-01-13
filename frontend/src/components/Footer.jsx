@@ -15,7 +15,8 @@ import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <>
+    <footer className="footer1">
       <div className="fbox">
 
         {/* LOGO / ABOUT */}
@@ -80,7 +81,14 @@ export default function Footer() {
 
       </div>
 
-      <p id="year">© 2026 CodeSpark. All Rights Reserved.</p>
+      
     </footer>
+
+    <footer className="footer2">
+      <div className="bottom-footer">
+        <p id="year">© 2026 CodeSpark. All Rights Reserved.</p>
+      </div>
+    </footer>
+    </>
   );
 }

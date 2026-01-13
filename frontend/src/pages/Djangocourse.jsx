@@ -2,7 +2,7 @@ import "./PythonCourse.css";
 import { FaArrowLeft } from "react-icons/fa";
 import {Link, useNavigate } from "react-router-dom";
 
-function SqlCourse() {
+function DjangoCourse() {
   const navigate = useNavigate();
 
   return (
@@ -14,18 +14,20 @@ function SqlCourse() {
       </button>
 
       <div className="course-icon">🗄️</div>
-      <h2>SQL Syllabus</h2>
-      <p>Duration: 10 Days • Fee: ₹999</p>
+      <h2>Django Syllabus</h2>
+      <p>Duration: 30 Days • Fee: ₹2,499</p>
 
       <ul className="course-list">
-        <li>Database & RDBMS Basics</li>
-        <li>SELECT, INSERT, UPDATE, DELETE</li>
-        <li>WHERE, ORDER BY</li>
-        <li>GROUP BY, HAVING</li>
-        <li>JOINS</li>
-        <li>Subqueries</li>
-        <li>Constraints & Keys</li>
-        <li>Real-time Queries</li>
+        <li>Django Introduction and Setup</li>
+        <li>Project Structure</li>
+        <li>Models, Views, and Templates</li>
+        <li>URL Routing</li>
+        <li>Forms & Validation</li>
+        <li>ORM & Database</li>
+        <li>Authentication & Authorization</li>
+        <li>CRUD Operations</li>
+        <li>REST API Basic</li>
+        <li>Mini Project</li>
       </ul>
 
       <Link className="course-btn" to="/">Enroll Now</Link>
@@ -33,4 +35,4 @@ function SqlCourse() {
   );
 }
 
-export default SqlCourse;
+export default DjangoCourse;

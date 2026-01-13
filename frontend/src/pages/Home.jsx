@@ -133,42 +133,42 @@ function Home() {
             <img src="src/assets/django.jpg" alt="" />
             <h3>Python,SQL,Django</h3>
             <p>Python web framework </p>
-           <Link to="/python" className="course-link">course details</Link>
+           <Link to="/django" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/htmlcss.jpg" alt="" />
             <h3>Web Development</h3>
             <p>Build responsive and interactive websites with our Web Designing Course in Chennai.</p>
-            <Link to="/python" className="course-link">course details</Link>
+            <Link to="/htmlcss" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/js.jpg" alt="" />
             <h3>HTML,CSS,JavaScript,Reactjs</h3>
             <p>Dynamic web applications</p>
-           <Link to="/python" className="course-link">course details</Link>
+           <Link to="/js" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/dataanalytics.png" alt="" />
             <h3>Data Analytics</h3>
             <p>Data visualization and insights</p>
-            <Link to="/python" className="course-link">course details</Link>
+            <Link to="/dataa" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/datascience.webp" alt="" />
             <h3>Data Science</h3>
             <p>Gain in-depth knowledge of data analytics and machine learning with our Data Science Course.</p>
-           <Link to="/python" className="course-link">course details</Link>
+           <Link to="/datas" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/fullstack.jpg" alt="" />
             <h3>Python Full Stack</h3>
             <p>Master both front-end and back-end technologies with our Full Stack Developer Course.</p>
-            <Link to="/python" className="course-link">course details</Link>
+            <Link to="/pyfull" className="course-link">course details</Link>
           </div>
         </div>
       </section>
