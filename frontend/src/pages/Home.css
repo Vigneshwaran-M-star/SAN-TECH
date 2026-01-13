@@ -181,7 +181,7 @@
   display: inline-block;
   margin: 20px 0;
   padding: 10px 22px;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background:#ff6600;
   color: #ffffff;
   border-radius: 25px;
   font-weight: bold;
@@ -190,7 +190,7 @@
 }
 
 .course-link:hover {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: #e6640d;
   transform: scale(1.08);
-  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 8px 18px #ff6600;
 }

@@ -1,86 +1,133 @@
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:10px;
-  background-color:whitesmoke;
-  /* gap: 10%; */
+  padding: 14px 40px;
+  background: linear-gradient(90deg, #ffffff, #f8f9ff);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
-.logo-image{
-    height: 50px;
-    width: 50px;
-}
+
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-image {
+  height: 50px;
+  width: 50px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 20px;
-  text-decoration: none;
-  
-}
-.navbar-links li a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 22px;
-  color: black;
-}
-.enroll-button {
-  padding: 10px 20px;
-  background-color: #ff6600;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}   
-.enroll-button:hover {
-  background-color: #e65c00;
-}
-.navbar-menu{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  gap: 30px;
 }
 
-/* Modal Background */
+.navbar-links li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background: #ff6600;
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-links li a:hover {
+  color: #ff6600;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+.enroll-button {
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #ff6600, #ff4500);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+.enroll-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 102, 0, 0.6);
+}
+
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  animation: fadeIn 0.4s ease;
 }
 
-/* Modal Box */
 .modal {
-  background: #fff;
+  background: white;
   padding: 30px;
-  border-radius: 10px;
-  width: 350px;
+  width: 360px;
+  border-radius: 15px;
   position: relative;
-  animation: slideDown 0.3s ease;
+  animation: scaleUp 0.4s ease;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
-/* Close Button */
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
+  top: 12px;
+  right: 18px;
+  font-size: 26px;
   cursor: pointer;
+  color: #555;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Form */
+.close-btn:hover {
+  color: #ff4500;
+  transform: rotate(90deg);
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #213047;
+}
+
 .register-form {
   display: flex;
   flex-direction: column;
@@ -88,33 +135,53 @@
 }
 
 .register-form input {
-  padding: 10px;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.register-form input:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 8px rgba(255, 102, 0, 0.4);
+  outline: none;
 }
 
 .register-form button {
-  padding: 10px;
-  background: #ff6600;
+  margin-top: 10px;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff6600, #ff4500);
+  color: white;
   border: none;
-  color: #fff;
+  border-radius: 25px;
+  font-size: 16px;
   font-weight: bold;
-  border-radius: 5px;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 .register-form button:hover {
-  background: #e65c00;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 102, 0, 0.5);
 }
 
-/* Animation */
-@keyframes slideDown {
+@keyframes fadeIn {
   from {
-    transform: translateY(-40px);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
     opacity: 1;
   }
 }

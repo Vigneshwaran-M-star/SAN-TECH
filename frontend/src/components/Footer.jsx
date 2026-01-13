@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
 
           <p className="footer-desc">
-            CodeSpark is a learning platform focused on web development,
+            CodeSpark is a Online learning platform focused on web development,
         Python, and real-world projects.
           </p>
           
