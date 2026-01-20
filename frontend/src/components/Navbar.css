@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 40px;
+  padding: 14px 10px;
   background: linear-gradient(90deg, #ffffff, #f8f9ff);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   position: sticky;
@@ -13,7 +13,7 @@
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
