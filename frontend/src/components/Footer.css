@@ -55,6 +55,7 @@
   font-size: 1.2rem;
   margin-bottom: 12px;
   position: relative;
+  text-align: left;
 }
 .footer-menu ul{
   list-style: none ;
@@ -67,6 +68,7 @@
   position: absolute;
   bottom: -6px;
   left: 0;
+  
 }
 
 .footer-menu li {
