@@ -112,6 +112,19 @@
   box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
 }
 
+.success-msg {
+  background: #022c22;
+  color: #5eead4;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 13px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #14b8a6;
+}
+
+
 /* Mobile Responsive */
 @media (max-width: 480px) {
   .hero-form {

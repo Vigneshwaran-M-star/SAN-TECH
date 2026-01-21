@@ -3,7 +3,6 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 
 function Home() {
-
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -11,7 +10,9 @@ function Home() {
     course: ""
   });
 
-  // ✅ ADD THIS FUNCTION
+  const [success, setSuccess] = useState(false);
+
+  // handle input change
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -19,6 +20,7 @@ function Home() {
     });
   };
 
+  // handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -31,8 +33,17 @@ function Home() {
         }
       );
 
-      // alert("Form submitted successfully!");
-      setFormData({ name: "", phone: "", email: "", course: "" });
+      setSuccess(true);
+
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        course: ""
+      });
+
+      // auto hide success message
+      setTimeout(() => setSuccess(false), 3000);
 
     } catch (error) {
       console.error(error);
@@ -40,12 +51,10 @@ function Home() {
     }
   };
 
-
   return (
     <>
-    
       {/* Hero Section */}
-       <section className="hero">
+      <section className="hero">
         <div>
           <h1>Online Learning Platform</h1>
           <p>We build modern websites and web applications.</p>
@@ -53,6 +62,8 @@ function Home() {
         </div>
 
         <div className="hero-form">
+         
+
           <form onSubmit={handleSubmit}>
             <h2>Enrollment Form</h2>
 
@@ -107,47 +118,52 @@ function Home() {
 
             <button type="submit">Submit</button>
           </form>
+           {success && (
+            <div className="success-msg">
+              ✅ Enrollment submitted successfully!
+            </div>
+          )}
         </div>
       </section>
 
       {/* Courses Section */}
-     <section className="courses" id="courses">
+      <section className="courses" id="courses">
         <h2>Courses</h2>
 
         <div className="course-cards">
           <div className="card">
-            <img className="pythonimg" src="src/assets/python.webp" alt="" />
+            <img src="src/assets/python.webp" alt="" />
             <h3>Python</h3>
-            <p>From fundamentals to advanced concepts, gain the skills required for modern development.</p>
+            <p>From fundamentals to advanced concepts.</p>
             <Link to="/python" className="course-link">course details</Link>
           </div>
 
           <div className="card">
-            <img className="sqlimg" src="src/assets/sql.avif" alt="" />
-            <h3>Python,SQL</h3>
+            <img src="src/assets/sql.avif" alt="" />
+            <h3>Python, SQL</h3>
             <p>Database management and queries</p>
             <Link to="/sql" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/django.jpg" alt="" />
-            <h3>Python,SQL,Django</h3>
-            <p>Python web framework </p>
-           <Link to="/django" className="course-link">course details</Link>
+            <h3>Python, SQL, Django</h3>
+            <p>Python web framework</p>
+            <Link to="/django" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/htmlcss.jpg" alt="" />
             <h3>Web Development</h3>
-            <p>Build responsive and interactive websites with our Web Designing Course in Chennai.</p>
+            <p>Build responsive websites</p>
             <Link to="/htmlcss" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/js.jpg" alt="" />
-            <h3>HTML,CSS,JavaScript,Reactjs</h3>
+            <h3>Frontend Development</h3>
             <p>Dynamic web applications</p>
-           <Link to="/js" className="course-link">course details</Link>
+            <Link to="/js" className="course-link">course details</Link>
           </div>
 
           <div className="card">
@@ -160,14 +176,14 @@ function Home() {
           <div className="card">
             <img src="src/assets/datascience.webp" alt="" />
             <h3>Data Science</h3>
-            <p>Gain in-depth knowledge of data analytics and machine learning with our Data Science Course.</p>
-           <Link to="/datas" className="course-link">course details</Link>
+            <p>Analytics and machine learning</p>
+            <Link to="/datas" className="course-link">course details</Link>
           </div>
 
           <div className="card">
             <img src="src/assets/fullstack.jpg" alt="" />
             <h3>Python Full Stack</h3>
-            <p>Master both front-end and back-end technologies with our Full Stack Developer Course.</p>
+            <p>Frontend + Backend mastery</p>
             <Link to="/pyfull" className="course-link">course details</Link>
           </div>
         </div>
