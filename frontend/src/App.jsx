@@ -12,6 +12,7 @@ import DatasCourse from "./pages/Datascourse";
 import PyfullCourse from "./pages/Pyfullcourse";
 import DataaCourse from "./pages/Dataacourse";
 import Homehero from "./pages/Homehero";
+import EnrollForm from "./pages/Enrollform";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/datas" element={<DatasCourse />} />
         <Route path="/pyfull" element={<PyfullCourse />} />
         <Route path="/" element={<Homehero />} />
+        <Route path="/enroll" element={<EnrollForm />} />
       </Routes>
       <Footer />
     </BrowserRouter>
