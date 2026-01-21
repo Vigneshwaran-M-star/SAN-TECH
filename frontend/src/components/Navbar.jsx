@@ -11,7 +11,7 @@ function Navbar() {
         <div className="navbar-logo">
           <img src="./src/assets/logo.png" alt="Logo" className="logo-image" />
           <h1 style={{ color: "#ff6600", fontWeight: "bold" }}>
-            <span style={{ color: "#213047ff" }}>Code</span>Spark
+            <span style={{ color: "#003893ff" }}>Code</span>Spark
           </h1>
         </div>
 

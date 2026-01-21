@@ -1,94 +1,77 @@
-import { Link } from "react-router-dom";
 import "./Footer.css";
 import footerLogo from "../assets/logo.png";
-
-
 import {
   FaInstagram,
   FaTwitter,
   FaWhatsapp,
   FaFacebook,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-
 
 export default function Footer() {
   return (
     <>
-    <footer className="footer1">
-      <div className="fbox">
 
-        {/* LOGO / ABOUT */}
-        <div className="footer-top">
-          <div className="footer-t">
-            <img src={footerLogo} id="footerimg" alt="CodeSpark Logo" />
-            <h3 className="footer-title"><span style={{ color: "#213047ff" }}>Code</span>Spark</h3>
+      {/* FOOTER */}
+      <footer className="footer">
+        <div className="footer-container">
+
+          {/* LOGO */}
+          <div className="footer-col">
+            <div className="footer-img">
+            <img src={footerLogo} alt="CodeSpark" className="footer-logo" />
+            <h2><span style={{color:"#003893ff"}}>Code</span>Spark</h2>
+            </div>
+            <p className="footer-text">
+              Bridge of Learning Technology
+            </p>
+
+            <div className="social-icons">
+              <FaInstagram />
+              <FaFacebook />
+              <FaTwitter />
+              <FaWhatsapp />
+            </div>
           </div>
 
-          <p className="footer-desc">
-            CodeSpark is a Online learning platform focused on web development,
-        Python, and real-world projects.
-          </p>
           
-          {/* FOLLOW US – ICON ONLY */}
-        <div className="footer-menu">
-          <ul className="follow-us">
-            <li><a href="#"><FaFacebook /></a></li>
-            <li><a href="#"><FaInstagram /></a></li>
-            <li><a href="#"><FaTwitter /></a></li>
-            <li><a href="#"><FaWhatsapp /></a></li>
-          </ul>
-        </div>
-        </div>
+          <div className="footer-col">
+            <h1><span style={{color:"white"}}>Quick</span> Links</h1>
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Contact us</a>
+          </div>
 
-        {/*about us */}
-        <div className="footer-menu">
-          <h5>About Us</h5>
-          <ul><a href="#">About Us</a></ul>
-          <ul><a href="#">Courses</a></ul>
-        </div>
+          
+          <div className="footer-col">
+            <h1><span style={{color:"white"}}>Popular</span> Courses</h1>
+            <a href="#">Python</a>
+            <a href="#">Full Stack Development</a>
+            <a href="#">Data Analytics</a>
+          </div>
 
-        {/*company */}
-        <div className="footer-menu">
-          <h5>Company</h5>
-          <ul><a href="#">Programing</a></ul>
-          <ul><a href="#">Design & creatives</a></ul>
-          <ul><a href="#">Programing</a></ul>
-        </div>
+          
+          <div className="footer-col">
+            <h1><span style={{color:"white"}}>Contact</span> us</h1>
+            <p><FaPhoneAlt /> +9190253 53470</p>
+            <p><MdEmail /> vigneshwaran2618@gmail.com</p>
+            <p><FaMapMarkerAlt />Chennai, Tamil Nadu, India</p>
+          </div>
 
-        {/* CONNECT */}
-        <div className="footer-menu">
-          <h5>Contacts</h5>
-          <ul>
-            <li>
-              <a href="tel:+919025353470">
-                <FaPhoneAlt /> +91 90253 53470
-              </a>
-            </li>
-            <li>
-              <a href="mailto:vigneshwaran2618@gmail.com">
-                <MdEmail /> vigneshwaran2618@gmail.com
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FaMapMarkerAlt /> Tamil Nadu, India
-              </a>
-            </li>
-          </ul>
         </div>
 
-      </div>
-
-      
-    </footer>
-
-    <footer className="footer2">
-      <div className="bottom-footer">
-        <p id="year">© 2026 CodeSpark. All Rights Reserved.</p>
-      </div>
-    </footer>
+        {/* BOTTOM BAR */}
+        <div className="footer-bottom">
+          <p>© 2026 CodeSpark. All Rights Reserved</p>
+          <div className="footer-links">
+            <a href="#">Disclaimer</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
