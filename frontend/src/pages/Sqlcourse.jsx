@@ -15,9 +15,9 @@ function PyfullCourse() {
         </button>
 
         {/* Icon */}
-        <div className="course-icon">🐍</div>
+        <div className="course-icon">🗄️</div>
 
-        <h2 className="course-title">Python Full-Stack</h2>
+        <h2 className="course-title">SQL</h2>
 
         {/* Duration & Fee */}
         <div className="course-stats">

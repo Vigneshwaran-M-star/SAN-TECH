@@ -1,35 +1,65 @@
 import "./PythonCourse.css";
 import { FaArrowLeft } from "react-icons/fa";
-import {Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function DatasCourse() {
+function PyfullCourse() {
   const navigate = useNavigate();
 
   return (
-    <div className="course-page">
-      
-      {/* Back Icon */}
-      <button className="back-btn" onClick={() => navigate(-1)}>
-        <FaArrowLeft />
-      </button>
+    <div className="course-overlay">
+      <div className="course-modal">
+        
+        {/* Back Button */}
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          <FaArrowLeft />
+        </button>
 
-      <div className="course-icon">🗄️</div>
-      <h2>Data Science Syllabus</h2>
-      <p>Duration: 45 Days • Fee: ₹4,999</p>
+        {/* Icon */}
+        <div className="course-icon">📈</div>
 
-      <ul className="course-list">
-        <li>Python for Data Science</li>
-        <li>NumPy & Pandas</li>
-        <li>Data Analysis</li>
-        <li>Data Visualization</li>
-        <li>Statistics Basics</li>
-        <li>Machine Learning Introduction</li>
-        <li>Mini Project</li>
-      </ul>
+        <h2 className="course-title">Data Science</h2>
 
-      <Link className="course-btn" to="/">Enroll Now</Link>
+        {/* Duration & Fee */}
+        <div className="course-stats">
+          <div className="stat-box">
+            <span>⏱ Duration</span>
+            <strong>45 Days</strong>
+          </div>
+          <div className="stat-box">
+            <span>💰 Course Fee</span>
+            <strong>₹4,999</strong>
+          </div>
+        </div>
+
+        {/* Features */}
+        <div className="features-box">
+          <h4>✨ Special Features & Support</h4>
+          <div className="features-grid">
+            <div>🎯 Placement Assistance</div>
+            <div>📞 24×7 Support</div>
+            <div>👨‍🏫 Industry Experts</div>
+            <div>📜 Certification</div>
+          </div>
+        </div>
+
+        {/* Syllabus */}
+        <h4 className="syllabus-title">📘 Course Syllabus</h4>
+        <ul className="course-list">
+          <li>Python for Data Science</li>
+          <li>NumPy & Pandas</li>
+          <li>Data Analysis</li>
+          <li>Data Visualization</li>
+          <li>DOM Manipulation</li>
+          <li>Statistics Basics</li>
+          <li>Machine Learning Introduction</li>
+          <li>Mini Project</li>
+        </ul>
+
+        {/* Button */}
+        <button className="course-btn">Enroll Now</button>
+      </div>
     </div>
   );
 }
 
-export default DatasCourse;
+export default PyfullCourse;
