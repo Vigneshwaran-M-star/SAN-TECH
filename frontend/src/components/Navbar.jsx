@@ -4,39 +4,43 @@ import "./Navbar.css";
 
 function Navbar() {
   const [showModal, setShowModal] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
       <nav className="navbar">
         <div className="navbar-logo">
           <img src="./src/assets/logo.png" alt="Logo" className="logo-image" />
-          <h1 style={{ color: "#ff6600", fontWeight: "bold" }}>
-            <span style={{ color: "#003893ff" }}>Code</span>Spark
+          <h1>
+            <span style={{ color: "#003893" }}>Code</span>
+            <span style={{ color: "#ff6600" }}>Spark</span>
           </h1>
         </div>
 
-        <div className="navbar-menu">
+        {/* Hamburger */}
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </div>
+
+        <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
           <ul className="navbar-links">
-            <li><Link to="/">Home</Link></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><Link to="/About">About Us</Link></li>
-            <li><Link to="/about">Contact</Link></li>
+            <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+            <li><a href="#courses" onClick={() => setMenuOpen(false)}>Courses</a></li>
+            <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+            <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
           </ul>
 
-          <div className="navbar-auth">
-            <button className="enroll-button" onClick={() => setShowModal(true)}>
-              Enroll Now
-            </button>
-          </div>
+          <button className="enroll-button" onClick={() => setShowModal(true)}>
+            Enroll Now
+          </button>
         </div>
       </nav>
 
       {/* Modal */}
       {showModal && (
-        <div className="modal-overlay">
-          <div className="modal">
+        <div className="modal-overlay" onClick={() => setShowModal(false)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
             <span className="close-btn" onClick={() => setShowModal(false)}>×</span>
-
             <h2>Register</h2>
 
             <form className="register-form">
