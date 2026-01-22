@@ -32,7 +32,7 @@ function Homehero() {
   },
 ];
 
-// 👇 duplicate for infinite smooth scroll
+
 const allReviews = [...reviews, ...reviews];
 
 
@@ -40,7 +40,7 @@ const trackRef = useRef(null);
 const [position, setPosition] = useState(0);
 
 useEffect(() => {
-  const speed = 0.3; // lower = smoother
+  const speed = 0.3; 
   let animationFrame;
 
   const move = () => {
@@ -48,7 +48,7 @@ useEffect(() => {
       const cardWidth =
         trackRef.current.children[0].offsetWidth + 30;
 
-      // reset seamlessly
+      
       if (prev >= cardWidth * reviews.length) {
         return 0;
       }

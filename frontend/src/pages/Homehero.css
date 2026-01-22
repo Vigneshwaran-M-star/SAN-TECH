@@ -313,15 +313,15 @@
 /*working process section */
 .working-process {
  background: linear-gradient(135deg, #1f366d, #042355);
-  padding: 60px 20px;
+  padding: 45px;
   color: #fff;
 }
 
-.container {
+/* .container {
   max-width: 1200px;
   margin: auto;
   text-align: center;
-}
+} */
 
 .process-tag {
   display: inline-block;
@@ -356,8 +356,9 @@
 
 .process-cards {
   display: flex;
-  gap: 30px;
   justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; 
 }
 
 .process-card {
@@ -371,6 +372,7 @@
 .process-card:hover {
   transform: translateY(-8px);
   border-color: #ff6600;
+  box-shadow: 0 12px 30px rgba(255, 102, 0, 0.25);
 }
 
 .process-card .icon {
@@ -392,6 +394,19 @@
   color: #ccc;
   line-height: 1.6;
 }
+
+/* @media (max-width: 1025px) {
+  .container {
+    position: relative;
+    right: 130px;
+  }
+}
+@media (max-width: 769px) {
+   .process-cards{
+    display: block;
+   }
+} */
+
 
 /*review page*/
 .review-section {
