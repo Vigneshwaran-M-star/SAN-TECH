@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   min-height: 90vh;
-  background: linear-gradient(135deg, #1f366d, #042355);
+  background: linear-gradient(135deg, #051b79, #123cca);
   color: #fff;
   padding: 30px 3%;
   overflow: hidden;
@@ -91,7 +91,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ff6600;
+  background: #fc781b;
   border-radius:10px;
   padding: 10px;
 }
@@ -312,7 +312,7 @@
 
 /*working process section */
 .working-process {
- background: linear-gradient(135deg, #1f366d, #042355);
+ background: linear-gradient(135deg, #051b79, #123cca);
   padding: 45px;
   color: #fff;
 }
@@ -410,7 +410,7 @@
 
 /*review page*/
 .review-section {
-  background: linear-gradient(135deg, #1f366d, #042355);
+background: linear-gradient(135deg, #051b79, #123cca);
   color: #fff;
   padding: 80px 20px;
   margin-top: 3%;
