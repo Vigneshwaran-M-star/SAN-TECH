@@ -45,7 +45,6 @@ function EnrollForm() {
       <div className="hero-form">
         <div className="form-header">
           <h2>Enrollment</h2>
-          {/* <p>Fill the details and our team will contact you</p> */}
         </div>
 
         <form onSubmit={handleSubmit}>
