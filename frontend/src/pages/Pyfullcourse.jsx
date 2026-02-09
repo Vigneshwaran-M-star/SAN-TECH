@@ -55,7 +55,10 @@ function PyfullCourse() {
         </ul>
 
         {/* Button */}
-        <button className="course-btn">Enroll Now</button>
+        <button
+  className="course-btn"
+  onClick={() => navigate("/enroll")}
+>Enroll Now</button>
       </div>
     </div>
   );

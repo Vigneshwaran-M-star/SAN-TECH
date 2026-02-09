@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./Enrollform.css";
-import { Link } from "react-router-dom";
 
 function EnrollForm() {
   const [formData, setFormData] = useState({
@@ -11,18 +10,15 @@ function EnrollForm() {
   });
 
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  // handle input change
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       await fetch(
@@ -34,88 +30,94 @@ function EnrollForm() {
       );
 
       setSuccess(true);
+      setFormData({ name: "", phone: "", email: "", course: "" });
 
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        course: ""
-      });
-
-      // auto hide success message
       setTimeout(() => setSuccess(false), 3000);
-
-    } catch (error) {
-      console.error(error);
-      alert("Submission failed");
+    } catch {
+      alert("Submission failed. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <>
-      {/* Hero Section */}
     <section className="hero">
-  {/* RIGHT FORM */}
-  <div className="hero-form">
-    <form onSubmit={handleSubmit}>
-      <h2>Enroll Now</h2>
+      <div className="hero-form">
+        <div className="form-header">
+          <h2>Enrollment</h2>
+          {/* <p>Fill the details and our team will contact you</p> */}
+        </div>
 
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        placeholder="Full Name"
-        required
-      />
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            {/* <label>Full Name</label> */}
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
 
-      <input
-        type="tel"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        placeholder="Phone Number"
-        required
-      />
+          <div className="form-group">
+            {/* <label>Phone Number</label> */}
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
 
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Email Address"
-        required
-      />
+          <div className="form-group">
+            {/* <label>Email Address</label> */}
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter your email"
+              required
+            />
+          </div>
 
-      <select
-        name="course"
-        value={formData.course}
-        onChange={handleChange}
-        required
-      >
-        <option value="">Select Course</option>
-        <option>Python</option>
-        <option>SQL</option>
-        <option>Django</option>
-        <option>HTML + CSS</option>
-        <option>JavaScript</option>
-        <option>React JS</option>
-        <option>Data Analytics</option>
-        <option>Data Science</option>
-        <option>Python Full Stack</option>
-      </select>
+          <div className="form-group">
+            {/* <label>Course</label> */}
+            <select
+              name="course"
+              value={formData.course}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select a course</option>
+              <option>Python</option>
+              <option>SQL</option>
+              <option>Django</option>
+              <option>HTML + CSS</option>
+              <option>JavaScript</option>
+              <option>React JS</option>
+              <option>Data Analytics</option>
+              <option>Data Science</option>
+              <option>Python Full Stack</option>
+            </select>
+          </div>
 
-      <button type="submit">Submit Enrollment</button>
-    </form>
+          <button type="submit" disabled={loading}>
+            {loading ? "Submitting..." : "Submit Enrollment"}
+          </button>
+        </form>
 
-    {success && (
-      <div className="success-msg">
-        ✅ Enrollment submitted successfully!
+        {success && (
+          <div className="success-msg">
+            ✔ Enrollment submitted successfully
+          </div>
+        )}
       </div>
-    )}
-  </div>
-</section>
-    </>
+    </section>
   );
 }
 
