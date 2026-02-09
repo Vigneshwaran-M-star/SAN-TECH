@@ -159,19 +159,19 @@ useEffect(() => {
 
 
 {/*working process section */}
-<section class="working-process">
-  <div class="container">
+<section className="working-process">
+  <div className="container">
 
-    <span class="process-tag">Working Process</span>
-    <h2 class="process-title">
+    <span className="process-tag">Working Process</span>
+    <h2 className="process-title">
       How does it <span>Work</span>
     </h2>
 
-    <div class="process-cards">
+    <div className="process-cards">
 
       { /* Card 1 */ }
-      <div class="process-card">
-        <div class="icon">👆</div>
+      <div className="process-card">
+        <div className="icon">👆</div>
         <h3>Pick Your <span>Course</span></h3>
         <p>
           Select the course that aligns with your interests and career goals
@@ -179,8 +179,8 @@ useEffect(() => {
       </div>
 
       { /* Card 2 */ }
-      <div class="process-card">
-        <div class="icon">📚</div>
+      <div className="process-card">
+        <div className="icon">📚</div>
         <h3>Start <span>Learning</span></h3>
         <p>
           Engage with practical lessons and real-world projects to develop valuable skills
@@ -188,8 +188,8 @@ useEffect(() => {
       </div>
 
       { /* Card 3 */ }
-      <div class="process-card">
-        <div class="icon">💼</div>
+      <div className="process-card">
+        <div className="icon">💼</div>
         <h3>Get <span>Placed</span></h3>
         <p>
           Leverage your knowledge to successfully secure a placement and advance your career
