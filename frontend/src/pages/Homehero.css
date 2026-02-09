@@ -601,7 +601,7 @@ background: linear-gradient(135deg, #051b79, #123cca);
   .review-title{
     position: relative;
     right: 25%;
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media (max-width: 320px) {
@@ -612,6 +612,6 @@ background: linear-gradient(135deg, #051b79, #123cca);
   .review-title{
     position: relative;
     right: 27.5%;
-    font-size: 22px;
+    font-size: 20px;
   }
 }

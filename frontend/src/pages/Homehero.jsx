@@ -1,8 +1,17 @@
 import "./Homehero.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-
+import HomeImg from "../assets/image.png";
+import PyImg from "../assets/python-course.webp";
+import SqlImg from "../assets/sql-courses.webp";
+import DjangoImg from "../assets/django-courses.webp";
+import FullstackImg from "../assets/fullstack-course.webp";
+import JsImg from "../assets/js-course.webp";
+import DataaImg from "../assets/data-science-course.webp";
+import DatasImg from "../assets/data-science-course.webp";
+import PyfullImg from "../assets/fullstack-course.webp";  
 function Homehero() {
+ const navigate = useNavigate();
 
    const reviews = [
   {
@@ -86,11 +95,18 @@ useEffect(() => {
     </p>
     <div>
         <button className="slbut">Start Learning →</button>
-        <button className="viewbut">View Courses</button>
+       <button
+  className="viewbut"
+  onClick={() =>
+    document.getElementById("courses")?.scrollIntoView({
+      behavior: "smooth"
+    })
+  }
+>View Courses</button>
     </div>
     </div>
     <div className="hero-right">
-        <img className="heroimg" src="src/assets/image.png" alt="" />
+        <img className="heroimg" src={HomeImg} alt="" />
     </div> 
 </section>
 
@@ -100,56 +116,56 @@ useEffect(() => {
 
         <div className="course-cards">
           <div className="card">
-            <img src="src/assets/python-course.webp" alt="" />
+            <img src={PyImg} alt="" />
             <h3>Python</h3>
             <p>From fundamentals to advanced concepts.</p>
             <Link to="/python" className="course-link">course details</Link>
           </div>
 
           <div className="card">
-            <img src="src/assets/sql-courses.webp" alt="" />
+            <img src={SqlImg} alt="" />
             <h3>Python, SQL</h3>
             <p>Database management and queries</p>
             <Link to="/sql" className="course-link">course details</Link>
           </div>
 
           <div className="card">
-            <img src="src/assets/django-courses.webp" alt="" />
+            <img src={DjangoImg} alt="" />
             <h3>Python, SQL, Django</h3>
             <p>Python web framework</p>
             <Link to="/django" className="course-link">course details</Link>
           </div>
 
           <div className="card">
-            <img src="src/assets/fullstack-course.webp" alt="" />
+            <img src={FullstackImg} alt="" />
             <h3>Web Development</h3>
             <p>Build responsive websites</p>
             <Link to="/htmlcss" className="course-link">course details</Link>
           </div>
 
           <div className="card">
-            <img src="src/assets/js-course.webp" alt="" />
+            <img src={JsImg} alt="" />
             <h3>Frontend Development</h3>
             <p>Dynamic web applications</p>
             <Link to="/js" className="course-link">course details</Link>
           </div>
 
           <div className="card">
-            <img src="src/assets/data-science-course.webp" alt="" />
+            <img src={DataaImg} alt="" />
             <h3>Data Analytics</h3>
             <p>Data visualization and insights</p>
             <Link to="/dataa" className="course-link">course details</Link>
           </div>
 
           <div className="card">
-            <img src="src/assets/data-science-course.webp" alt="" />
+            <img src={DatasImg} alt="" />
             <h3>Data Science</h3>
             <p>Analytics and machine learning</p>
             <Link to="/datas" className="course-link">course details</Link>
           </div>
 
           <div className="card">
-            <img src="src/assets/fullstack-course.webp" alt="" />
+            <img src={PyfullImg} alt="" />
             <h3>Python Full Stack</h3>
             <p>Frontend + Backend mastery</p>
             <Link to="/pyfull" className="course-link">course details</Link>
@@ -208,7 +224,13 @@ useEffect(() => {
         <p>At CodeSpark Academy, we blend expert mentorship with practical training to help you thrive in today’s tech world. With flexible learning, real-world projects, and recognized certifications, we prepare you for career success.</p>
     </div>
     <div>
-        <button className="corbut">View Courses</button>
+        <button className="corbut"
+        onClick={() =>
+    document.getElementById("courses")?.scrollIntoView({
+      behavior: "smooth"
+    })
+  }
+        >View Courses</button>
     </div>
 </section>
 

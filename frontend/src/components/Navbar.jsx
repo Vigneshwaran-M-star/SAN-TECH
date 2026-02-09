@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
+import Logo from "../assets/logo.png";
 
 function Navbar() {
   const [showModal, setShowModal] = useState(false);
@@ -10,7 +11,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-logo">
-          <img src="./src/assets/logo.png" alt="Logo" className="logo-image" />
+          <img src={Logo} alt="Logo" className="logo-image" />
           <h1>
             <span style={{ color: "#003893" }}>Code</span>
             <span style={{ color: "#ff6600" }}>Spark</span>
