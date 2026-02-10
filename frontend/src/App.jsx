@@ -13,6 +13,7 @@ import PyfullCourse from "./pages/Pyfullcourse";
 import DataaCourse from "./pages/Dataacourse";
 import Homehero from "./pages/Homehero";
 import EnrollForm from "./pages/Enrollform";
+import ScrollToTop from "./ScrollToTop";
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
     <>
     <BrowserRouter>
      <Navbar />
+      <ScrollToTop />
       <Routes>
+        
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/python" element={<PythonCourse />} />
         <Route path="/sql" element={<SqlCourse />} />
