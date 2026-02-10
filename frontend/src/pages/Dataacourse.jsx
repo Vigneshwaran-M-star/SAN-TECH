@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 function PyfullCourse() {
   const navigate = useNavigate();
-
   return (
     <div className="course-overlay">
       <div className="course-modal">
