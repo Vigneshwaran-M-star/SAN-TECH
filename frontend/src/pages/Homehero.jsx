@@ -236,7 +236,7 @@ useEffect(() => {
 
 {/* REVIEW SECTION */}
 <section className="review-section">
-  <div className="container">
+  <div className="container1">
 
     <span className="review-tag">Reviews</span>
     <h2 className="review-title">

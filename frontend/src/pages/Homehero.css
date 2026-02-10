@@ -418,87 +418,31 @@
   line-height: 1.6;
 }
 
-@media (max-width: 1025px) {
-  .container {
-    position: relative;
-    right: 130px;
-  }
-}
 @media (max-width: 769px) {
-   .process-cards{
-    position: relative;
-    right: 130px;
-   }
-
 .process-card {
-    width: 220px;
+    width: 200px;
     margin-bottom: 30px;
   
-}
-.process-title{
-  position: relative;
-  right: 130px;
-}
-.process-tag{
-  position: relative;
-  right: 130px;
 }
 }
 
 @media (max-width: 480px) {
   .process-cards {
    display: block;
-   position: relative;
-    left: 120px;
   }
 
   .process-card {
-    width: 30%;
+    width: 100%;
     margin-bottom: 30px;
-  }
-
-  .process-title {
-    position: relative;
-    right: 25%;
-    /* font-size: 30px; */
-  }
-
-  .process-tag {
-    position: relative;
-    right: 25%;
   }
 }
 @media (max-width: 376px) {
-   .process-tag {
-    position: relative;
-    right: 27%;
-  }
   .process-title {
     font-size: 30px;
-     position: relative;
-    right: 27%;
-  }
-   .process-card {
-    width: 26%;
-    margin-bottom: 30px;
   }
 }
 
-@media (max-width: 320px) {
-   .process-tag {
-    position: relative;
-    right: 30%;
-  }
-  .process-title {
-    font-size: 28px;
-     position: relative;
-    right: 30%;
-  }
-   .process-card {
-    width: 22%;
-    margin-bottom: 30px;
-  }
-}
+
 
 
 /*review page*/
@@ -509,8 +453,8 @@ background: linear-gradient(135deg, #051b79, #123cca);
   margin-top: 3%;
 }
 
-.container {
-  width: 1200px;
+.container1 {
+  width: 100%;
   margin: auto;
   text-align: center;
 }
@@ -571,53 +515,10 @@ background: linear-gradient(135deg, #051b79, #123cca);
 }
 
 /* Mobile */
-@media (max-width: 768px) {
-  .review-card {
-    min-width: 35%;
-  }
-
-  .review-title {
-    font-size: 30px;
-  }
-  .review-tag{
-     position: relative;
-    right: 100px;
-  }
-  .review-title{
-    position: relative;
-    right: 100px;
-  }
-}
 @media (max-width: 480px) {
-  .review-tag{
-     position: relative;
-    right: 23%;
-  }
-  .review-title{
-    position: relative;
-    right: 23%;
-    font-size: 26px;
-  }
+   .review-card{
+    min-width: 100%;
+    margin-bottom: 30px;
+   }
 } 
-@media (max-width: 376px) {
-   .review-tag{
-     position: relative;
-    right: 25%;
-  }
-  .review-title{
-    position: relative;
-    right: 25%;
-    font-size: 24px;
-  }
-}
-@media (max-width: 320px) {
-   .review-tag{
-     position: relative;
-    right: 27.5%;
-  }
-  .review-title{
-    position: relative;
-    right: 27.5%;
-    font-size: 20px;
-  }
-}
+
